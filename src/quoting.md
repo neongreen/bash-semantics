@@ -5,7 +5,7 @@
   #content table.bash3 tbody td:nth-child(2) { width: 25%; }
 </style>
 
-Bash has many expressions that denote the same string.
+Bash gives you many ways to denote *the same string*.
 
 <div class="warning">
 
@@ -21,9 +21,9 @@ foo
 
 </div>
 
-## Unquoted strings
+## Bare strings
 
-Unquoted strings are the simplest form of string.
+Bare strings are the simplest form of strings.
 
 <table class="bash3">
   <thead><th>Bash</th><th>Raw string</th><th>Notes</th></thead>
@@ -31,10 +31,9 @@ Unquoted strings are the simplest form of string.
     <!-- cmdrun /book/echo.sh hello "" -->
     <!-- cmdrun /book/echo.sh 007 "Numbers are not evaluated" -->
     <!-- cmdrun /book/echo.sh -t "Not only alphanumeric\!" -->
+    <!-- cmdrun /book/echo.sh 'foo$HOME' "Shell expansion applies" -->
   </tbody>
 </table>
-
-*Shell expansion* still applies to unquoted strings. We will talk about it later.
 
 ## Escaping
 
@@ -68,6 +67,7 @@ Everything between single quotes is interpreted literally, even newlines.
   <thead><th>Bash</th><th>Raw string</th><th>Notes</th></thead>
   <tbody>
     <!-- cmdrun /book/echo.sh "'hello'" "" -->
+    <!-- cmdrun /book/echo.sh "''" "Empty string" -->
     <!-- cmdrun /book/echo.sh "'foo\nbar'" "Backslashes don't work" -->
     <!-- cmdrun /book/echo.sh "'\$HOME'" "Substitution doesn't work" -->
     <!-- cmdrun /book/echo.sh "'~/foo'" "\`~\` doesn't work" -->
