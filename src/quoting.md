@@ -96,7 +96,25 @@ Only these four characters are special. Other characters are not special.
     <!-- cmdrun /book/echo.sh '"~/foo"' "\`~\` is not special and remains untouched" -->
     <!-- cmdrun /book/echo.sh '"\$"' "Escaping works for special characters" -->
     <!-- cmdrun /book/echo.sh '"\""' "Escaping works for double quotes" -->
-    <!-- cmdrun /book/echo.sh '"\~"' "Escaping does not work otherwise\!" -->
+    <!-- cmdrun /book/echo.sh '"\~"' "Escaping doesn't work for non-special characters\!" -->
+  </tbody>
+</table>
+
+## C quotes
+
+TODO.
+
+## String concatenation
+
+String literals directly next to each other are concatenated.
+
+<table class="bash3">
+  <thead><th>Bash</th><th>Raw string</th><th>Notes</th></thead>
+  <tbody>
+    <!-- cmdrun /book/echo.sh "foo'bar'" "" -->
+    <!-- cmdrun /book/echo.sh "\"foo\"'bar'" "" -->
+    <!-- cmdrun /book/echo.sh "hello\"'\"" -->
+    <!-- cmdrun /book/echo.sh "-d' '" "Same as \`\"-d \"\`" -->
   </tbody>
 </table>
 
