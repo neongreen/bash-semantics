@@ -6,3 +6,6 @@ RUN cargo install mdbook --version 0.4.36 \
   && cargo install mdbook-cmdrun --version 0.6.0
 
 RUN apk add --no-cache bash
+
+WORKDIR /book
+ENTRYPOINT ["bash", "-c"]
